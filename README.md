@@ -1,3 +1,0 @@
-# FabioTeachGit
-
-HELLLO!
