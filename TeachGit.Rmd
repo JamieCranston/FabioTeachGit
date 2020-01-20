@@ -6,3 +6,10 @@ output: html_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+
+##Intended Learning objectives
+### Explain why someone may want to use git
+### Understand the difference between a git commit, pull and push
+### Be able to demonstrate how to initialise a new repository using rstudio and github
+### Explain why someone may want to use packrat
+### Be able to demonstrate the basic usages of packrat
