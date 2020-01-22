@@ -1,5 +1,6 @@
 ---
-title: "TeachGit"
+title: "Intro to Git and Packrat"
+author: James Cranston
 output: html_document
 ---
 
@@ -7,9 +8,59 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-##Intended Learning objectives
-### Explain why someone may want to use git
-### Understand the difference between a git commit, pull and push
-### Be able to demonstrate how to initialise a new repository using rstudio and github
-### Explain why someone may want to use packrat
-### Be able to demonstrate the basic usages of packrat
+## Intended Learning objectives
+1. Explain why someone may want to use git
+2. Understand the difference between a git commit, pull and push
+3. Be able to demonstrate how to initialise a new repository using rstudio and github
+4. Explain why someone may want to use packrat
+5. Be able to demonstrate the basic usages of packrat
+
+*Full disclosure this is a little bit loose for teaching resources.It was a bit rushed, so apologies if it isn't that clear in all places. I'm happy for people to send me questions about it later via email, search for jamie cranston on outlook to find my email address.*
+
+## Git
+
+###Why I like git
+Ever accidentally deleted a file, or changed some code and it no longer works? How good would it be if you could go back and undo that change.
+
+That is basically the point of git. Git is a version control system. It will keep track of a repository (think a folder on your computer) as it changes with the ability to go back to earlier versions of the repository (commits).
+
+To avoid using all the memory on your computer, git compresses repos. It does this by a technique called delta compression. Rather than record every file in the repository at every commit, git only records differences or diffs.
+
+The other thing which git is really good for is portability.
+
+
+### Useful Links
+This is a really useful resource for getting used to working with rstudio and git. Explains how to do almost anything you would want to do via a point and click approach so no coding knowledge required.
+
+https://happygitwithr.com/ 
+
+This is the authorative resource for git commands if you need the documentation. Not as user-friendly as the first link but may be useful if you ever hit a problem or want to check what a git command does.
+
+https://git-scm.com/book/en/v2
+
+This is my recommended Git Client, this isn't necessary for using git but it can be useful for visualising more complicated projects. Not often necessary for working alone on projects.
+
+https://www.gitkraken.com/ 
+
+## Packrat
+
+Packrat is probably less useful to the individual to git but will become increasingly important in publishing as scrutiny of code and reproducibility increases. It is also an important part of version control as the packages you use can effect how the code __which you have written__ functions.
+
+### Upsides
+Used correctly packrat means that your project could be used by anybody in the future, even if updates had been made to all the packages which changed all the functions you had used (because the archived packages are still available on CRAN). This is true reproducibility.
+
+If you need to use different versions of packages in different projects.
+
+Easy to move your project onto a new computer.
+
+### Downsides
+Packrat can be painfully slow when the project is first initialised.
+Packrat doesn't always play nice with packages which are not available on CRAN.
+Packrat uses more memory than having a single R library.
+
+
+### Useful Links
+
+This is a simple guide on the packrat functions and well worth reading in full if you wish to use packrat.
+
+https://rstudio.github.io/packrat/
