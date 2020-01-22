@@ -20,13 +20,23 @@ knitr::opts_chunk$set(echo = TRUE)
 ## Git
 
 ###Why I like git
-Ever accidentally deleted a file, or changed some code and it no longer works? How good would it be if you could go back and undo that change.
+Ever accidentally deleted a file, or changed some code an d it no longer works? How good would it be if you could go back and undo that change.
 
 That is basically the point of git. Git is a version control system. It will keep track of a repository (think a folder on your computer) as it changes with the ability to go back to earlier versions of the repository (commits).
 
 To avoid using all the memory on your computer, git compresses repos. It does this by a technique called delta compression. Rather than record every file in the repository at every commit, git only records differences or diffs.
 
-The other thing which git is really good for is portability.
+The other thing which git is really good for is portability. Git is able to sync multiple repos. One is your local repo where your commits are made to. You can link this to a remote repo on a server using for example github.com.
+
+This can be really useful, if I lose my laptop. I could just buy/borrow a new one and provided my remote repo was up to date I could justs, download (or clone to use the git lingo) from github and I'm ready to go. 
+
+**However please note git is really really really not built to be a backup storage system like an extra hard drive do this and it will bring you pain speaking from personal experience** 
+
+Version control only small files which are needed to produce large files such as data files or figures.
+
+We can do this using .gitignore. This is a file which tells git which files not to keep track of. It can contain file names, directories (folders) or file types. In rstudio various files are automatically added to .gitignore such as your workspace ".RData". Usually because these are large files or are potentially sensitive i.e. your user profile which could contain passwords.
+
+Never put passwords or similar onto github. 
 
 
 ### Useful Links
