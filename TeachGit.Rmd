@@ -1,7 +1,7 @@
 ---
 title: "Intro to Git and Packrat"
 author: James Cranston
-output: html_document
+output: rmarkdown::github_document
 ---
 
 ```{r setup, include=FALSE}
